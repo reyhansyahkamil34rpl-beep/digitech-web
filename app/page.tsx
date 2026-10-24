@@ -1,5 +1,5 @@
 'use client';
-import './globals.css'; 
+import './globals.css';
 import React, { useState } from 'react';
 import {
   Code2, Layout, Smartphone, Settings, Sparkles, CheckCircle2,
@@ -417,17 +417,48 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-slate-800/80 bg-slate-950 py-12 px-4 sm:px-6 lg:px-8 text-slate-400 text-xs text-center md:text-left">
+      <footer className="relative z-10 border-t border-slate-800/80 bg-slate-950/90 backdrop-blur-xl py-12 px-4 sm:px-6 lg:px-8 text-slate-400 text-xs">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <img
-              src="/pngcode.svg"
-              alt="Logo DIGITECH"
-              className="w-10 h-10 object-contain"
-            />
-            <span className="text-slate-200 font-bold text-sm tracking-wider">DIGITECH SOLUTION</span>
+
+          {/* Brand Section */}
+          <div className="flex flex-col items-center md:items-start gap-2">
+
+            {/* Badge Tim */}
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-semibold text-blue-400 tracking-wider uppercase drop-shadow-[0_0_10px_rgba(59,130,246,0.3)]">
+              ✨ CREATE TEAM BEFAN GANTENG GANK
+            </span>
+
+            <div className="flex items-center gap-3 mt-1">
+              {/* Glow Container di belakang logo */}
+              <div className="relative p-1.5 rounded-xl bg-slate-900 border border-slate-800 shadow-md shadow-blue-500/10">
+                <img
+                  src="/pngcode.svg"
+                  alt="Logo DIGITECH"
+                  className="w-8 h-8 object-contain drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]"
+                />
+              </div>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-blue-400 font-bold text-base tracking-wider">
+                DIGITECH <span className="text-blue-500">SOLUTION</span>
+              </span>
+            </div>
+            <p className="text-slate-400 max-w-xs text-center md:text-left text-[11px] leading-relaxed">
+              Mitra transformasi digital terpercaya untuk pengembangan web & solusi teknologi modern.
+            </p>
           </div>
-          <p>© {new Date().getFullYear()} DIGITECH. All rights reserved.</p>
+
+          {/* Quick Links Navigasi */}
+          <div className="flex items-center gap-6 text-slate-300 font-medium text-xs my-2 md:my-0">
+            <a href="#hero" className="hover:text-blue-400 transition-colors">Beranda</a>
+            <a href="#services" className="hover:text-blue-400 transition-colors">Layanan</a>
+            <a href="#calculator" className="hover:text-blue-400 transition-colors">Hitung Biaya</a>
+            <a href="#contact" className="hover:text-blue-400 transition-colors">Kontak</a>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-slate-400 text-center md:text-right border-t md:border-t-0 border-slate-800/60 pt-4 md:pt-0 w-full md:w-auto">
+            © {new Date().getFullYear()} <span className="text-slate-300 font-semibold">DIGITECH SOLUTION</span>. All rights reserved.
+          </div>
+
         </div>
       </footer>
 
