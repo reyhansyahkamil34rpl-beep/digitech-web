@@ -1,5 +1,5 @@
 'use client';
-
+import './globals.css'; 
 import React, { useState } from 'react';
 import {
   Code2, Layout, Smartphone, Settings, Sparkles, CheckCircle2,
