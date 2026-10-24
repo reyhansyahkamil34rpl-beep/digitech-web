@@ -430,7 +430,7 @@ export default function Home() {
           <p>© {new Date().getFullYear()} DIGITECH. All rights reserved.</p>
         </div>
         <div>
-          <p className='mb-7'>BY TEAM BEFAN GANTENG GANK</p>
+          <p>BY TEAM BEFAN GANTENG GANK</p>
         </div>
       </footer>
 
