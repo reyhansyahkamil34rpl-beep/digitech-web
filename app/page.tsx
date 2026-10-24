@@ -446,8 +446,8 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Quick Links Navigasi */}
-          <div className="flex items-center gap-6 text-slate-300 font-medium text-xs my-2 md:my-0">
+          {/* Quick Links Navigasi (HANYA MUNCUL DI HP, SEMBUNYI DI DESKTOP) */}
+          <div className="flex md:hidden items-center gap-6 text-slate-300 font-medium text-xs my-2">
             <a href="#hero" className="hover:text-blue-400 transition-colors">Beranda</a>
             <a href="#services" className="hover:text-blue-400 transition-colors">Layanan</a>
             <a href="#calculator" className="hover:text-blue-400 transition-colors">Hitung Biaya</a>
