@@ -24,7 +24,7 @@ export default function Home() {
   });
 
   // Helper untuk rendering icon dinamis
-  const renderIcon = (name) => {
+  const renderIcon = (name: string) => {
     switch (name) {
       case 'Layout': return <Layout className="w-8 h-8 text-cyan-400" />;
       case 'Smartphone': return <Smartphone className="w-8 h-8 text-fuchsia-400" />;
@@ -60,7 +60,7 @@ export default function Home() {
     return Math.round(total);
   };
 
-  const formatIDR = (val) => {
+  const formatIDR = (val: number) => {
     return new Intl.NumberFormat('id-ID', {
       style: 'currency',
       currency: 'IDR',
