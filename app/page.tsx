@@ -429,6 +429,9 @@ export default function Home() {
           </div>
           <p>© {new Date().getFullYear()} DIGITECH. All rights reserved.</p>
         </div>
+        <div>
+          <p>BY TEAM BEFAN GANTENG GANK</p>
+        </div>
       </footer>
 
       {/* FLOATING WHATSAPP BUTTON */}
