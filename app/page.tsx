@@ -107,8 +107,8 @@ export default function Home() {
 
           <div className="hidden md:flex items-center gap-6 text-xs font-medium text-slate-300">
             <a href="#services" className="hover:text-cyan-400 transition-colors">Layanan</a>
-            <a href="#portfolio" className="hover:text-cyan-400 transition-colors">Portofolio</a>
             <a href="#about" className="hover:text-cyan-400 transition-colors">Tentang Kami</a>
+            <a href="#portfolio" className="hover:text-cyan-400 transition-colors">Portofolio</a>
             <a href="#workflow" className="hover:text-cyan-400 transition-colors">Alur Kerja</a>
             <a href="#calculator" className="hover:text-cyan-400 transition-colors">Estimasi Biaya</a>
             <a href="#faq" className="hover:text-cyan-400 transition-colors">FAQ</a>
@@ -233,7 +233,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 1. SECTION PORTOFOLIO (REVISI BESAR #1) */}
+      {/* 1. SECTION TENTANG KAMI */}
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-widest text-fuchsia-400 bg-fuchsia-500/10 px-3 py-1 rounded-full border border-fuchsia-500/20">
+              Tentang DIGITECH
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-4 leading-tight">
+              Mitra Strategis Transformasi Digital Bisnis Anda
+            </h2>
+            <p className="text-slate-400 text-sm mt-4 leading-relaxed">
+              DIGITECH SOLUTION hadir untuk membantu UMKM, sekolah, organisasi, dan perusahaan dalam mengadopsi teknologi modern. Kami percaya bahwa website tidak sekadar menjadi pajangan digital, tetapi alat pertumbuhan bisnis yang efisien, tepercaya, dan terjangkau.
+            </p>
+
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+                <h4 className="text-2xl font-bold text-cyan-400">100%</h4>
+                <p className="text-xs text-slate-400 mt-1">Transparansi Biaya & Kode Berstandar Tinggi</p>
+              </div>
+              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+                <h4 className="text-2xl font-bold text-fuchsia-400">Fast-Track</h4>
+                <p className="text-xs text-slate-400 mt-1">Pengerjaan Tepat Waktu & Support Berkelanjutan</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Profil Tim */}
+          <div className="p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-slate-800 relative shadow-xl">
+            <div className="absolute -top-3 -right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg border border-blue-400/30">
+              BEFAN GANTENG GANK
+            </div>
+            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <span>Pengelola Utama & Tim Kreatif</span>
+            </h3>
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800/80">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-rose-500 to-cyan-400 flex items-center justify-center font-bold text-white text-xl shrink-0 shadow-md">
+                BF
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-base">BEFAN & TEAM</h4>
+                <p className="text-cyan-400 text-xs font-medium">Lead Full-Stack Developer & UI/UX Designer</p>
+                <p className="text-slate-400 text-[11px] mt-1 leading-relaxed">Fokus pada arsitektur web modern, performa tinggi, dan antarmuka yang ramah pengguna.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. SECTION PORTOFOLIO (PINDAH KE SINI) */}
       <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
         <div className="text-center mb-16">
           <span className="text-xs font-semibold uppercase tracking-widest text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
@@ -318,55 +366,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. SECTION TENTANG KAMI (REVISI BESAR #2) */}
-      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-widest text-fuchsia-400 bg-fuchsia-500/10 px-3 py-1 rounded-full border border-fuchsia-500/20">
-              Tentang DIGITECH
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-4 leading-tight">
-              Mitra Strategis Transformasi Digital Bisnis Anda
-            </h2>
-            <p className="text-slate-400 text-sm mt-4 leading-relaxed">
-              DIGITECH SOLUTION hadir untuk membantu UMKM, sekolah, organisasi, dan perusahaan dalam mengadopsi teknologi modern. Kami percaya bahwa website tidak sekadar menjadi pajangan digital, tetapi alat pertumbuhan bisnis yang efisien, tepercaya, dan terjangkau.
-            </p>
-
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
-                <h4 className="text-2xl font-bold text-cyan-400">100%</h4>
-                <p className="text-xs text-slate-400 mt-1">Transparansi Biaya & Kode Berstandar Tinggi</p>
-              </div>
-              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
-                <h4 className="text-2xl font-bold text-fuchsia-400">Fast-Track</h4>
-                <p className="text-xs text-slate-400 mt-1">Pengerjaan Tepat Waktu & Support Berkelanjutan</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Profil Tim */}
-          <div className="p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-slate-800 relative shadow-xl">
-            <div className="absolute -top-3 -right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg border border-blue-400/30">
-              BEFAN GANTENG GANK
-            </div>
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-              <span>Pengelola Utama & Tim Kreatif</span>
-            </h3>
-            <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800/80">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-rose-500 to-cyan-400 flex items-center justify-center font-bold text-white text-xl shrink-0 shadow-md">
-                BF
-              </div>
-              <div>
-                <h4 className="text-white font-bold text-base">BEFAN & TEAM</h4>
-                <p className="text-cyan-400 text-xs font-medium">Lead Full-Stack Developer & UI/UX Designer</p>
-                <p className="text-slate-400 text-[11px] mt-1 leading-relaxed">Fokus pada arsitektur web modern, performa tinggi, dan antarmuka yang ramah pengguna.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. SECTION ALUR PENGERJAAN PROYEK (REVISI BESAR #3) */}
+      {/* 3. SECTION ALUR PENGERJAAN PROYEK */}
       <section id="workflow" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
         <div className="text-center mb-16">
           <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
@@ -550,7 +550,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. SECTION FAQ (REVISI BESAR #4) */}
+      {/* 4. SECTION FAQ */}
       <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-slate-800/40">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold uppercase tracking-widest text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20 inline-flex items-center gap-1.5">
@@ -674,8 +674,8 @@ export default function Home() {
           <div className="flex md:hidden items-center gap-4 text-slate-300 font-medium text-[11px] my-2 flex-wrap justify-center">
             <a href="#hero" className="hover:text-blue-400 transition-colors">Beranda</a>
             <a href="#services" className="hover:text-blue-400 transition-colors">Layanan</a>
-            <a href="#portfolio" className="hover:text-blue-400 transition-colors">Portofolio</a>
             <a href="#about" className="hover:text-blue-400 transition-colors">Tentang</a>
+            <a href="#portfolio" className="hover:text-blue-400 transition-colors">Portofolio</a>
             <a href="#workflow" className="hover:text-blue-400 transition-colors">Alur</a>
             <a href="#calculator" className="hover:text-blue-400 transition-colors">Biaya</a>
             <a href="#faq" className="hover:text-blue-400 transition-colors">FAQ</a>
