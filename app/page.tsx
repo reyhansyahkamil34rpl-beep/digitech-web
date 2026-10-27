@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import {
   Code2, Layout, Smartphone, Settings, Sparkles, CheckCircle2,
   ArrowRight, MessageCircle, ChevronRight, Calculator, Check,
-  Star, Award, Laptop, Flame, ShieldCheck
+  Star, Award, Laptop, Flame, ShieldCheck, ExternalLink, HelpCircle
 } from 'lucide-react';
 import { servicesData, testimonialsData, targetClientsData } from './data';
 
@@ -105,10 +105,13 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <div className="hidden md:flex items-center gap-6 text-xs font-medium text-slate-300">
             <a href="#services" className="hover:text-cyan-400 transition-colors">Layanan</a>
+            <a href="#portfolio" className="hover:text-cyan-400 transition-colors">Portofolio</a>
+            <a href="#about" className="hover:text-cyan-400 transition-colors">Tentang Kami</a>
+            <a href="#workflow" className="hover:text-cyan-400 transition-colors">Alur Kerja</a>
             <a href="#calculator" className="hover:text-cyan-400 transition-colors">Estimasi Biaya</a>
-            <a href="#testimonials" className="hover:text-cyan-400 transition-colors">Testimoni</a>
+            <a href="#faq" className="hover:text-cyan-400 transition-colors">FAQ</a>
           </div>
 
           <button
@@ -122,7 +125,7 @@ export default function Home() {
       </nav>
 
       {/* HERO SECTION */}
-      <section className="relative pt-20 pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+      <section id="hero" className="relative pt-20 pb-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-rose-500/30 bg-rose-500/10 text-rose-300 text-xs font-semibold uppercase tracking-wider mb-8 backdrop-blur-sm">
           <Sparkles className="w-4 h-4 text-rose-400 animate-pulse" />
           <span>Solusi Digital Terpercaya & Terjangkau</span>
@@ -230,8 +233,174 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 1. SECTION PORTOFOLIO (REVISI BESAR #1) */}
+      <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
+        <div className="text-center mb-16">
+          <span className="text-xs font-semibold uppercase tracking-widest text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+            Karya Terbaik Kami
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+            Portofolio & Showroom Proyek
+          </h2>
+          <p className="text-slate-400 text-sm max-w-2xl mx-auto mt-2">
+            Jelajahi hasil karya dan konsep solusi digital yang telah kami kembangkan menggunakan teknologi modern.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Item 1 */}
+          <div className="group relative rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 overflow-hidden transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm">
+            <div className="relative h-48 bg-slate-800 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1556742049-0a67d1d29366?auto=format&fit=crop&w=800&q=80" alt="UMKM E-Commerce" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <span className="absolute top-3 right-3 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md">
+                Proyek Demo
+              </span>
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Toko Online UMKM & Catalog</h3>
+              <p className="text-slate-400 text-xs mt-2 leading-relaxed">Aplikasi katalog produk lokal lengkap dengan fitur pencarian dan integrasi checkout instan ke WhatsApp seller.</p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Next.js</span>
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Tailwind CSS</span>
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">WhatsApp API</span>
+              </div>
+              <a href="#" className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                <span>Lihat Live Demo</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Item 2 */}
+          <div className="group relative rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 overflow-hidden transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm">
+            <div className="relative h-48 bg-slate-800 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Sistem Akademik" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <span className="absolute top-3 right-3 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md">
+                Proyek Demo
+              </span>
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Portal Edukasi & Profil Sekolah</h3>
+              <p className="text-slate-400 text-xs mt-2 leading-relaxed">Website profil instansi dengan pengumuman dinamis, formulir pendaftaran siswa baru, dan galeri kegiatan interaktif.</p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">TypeScript</span>
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">React</span>
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Supabase</span>
+              </div>
+              <a href="#" className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                <span>Lihat Live Demo</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Item 3 */}
+          <div className="group relative rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-cyan-500/50 overflow-hidden transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm">
+            <div className="relative h-48 bg-slate-800 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Dashboard Bisnis" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <span className="absolute top-3 right-3 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full backdrop-blur-md">
+                Proyek Demo
+              </span>
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Estimator & POS Kasir Digital</h3>
+              <p className="text-slate-400 text-xs mt-2 leading-relaxed">Aplikasi web kalkulator estimasi biaya dan pencatatan transaksi kustom untuk penyedia jasa profesional.</p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Next.js App Router</span>
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2.5 py-1 rounded-md border border-slate-700">Tailwind v4</span>
+              </div>
+              <a href="#" className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                <span>Lihat Live Demo</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. SECTION TENTANG KAMI (REVISI BESAR #2) */}
+      <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-widest text-fuchsia-400 bg-fuchsia-500/10 px-3 py-1 rounded-full border border-fuchsia-500/20">
+              Tentang DIGITECH
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-4 leading-tight">
+              Mitra Strategis Transformasi Digital Bisnis Anda
+            </h2>
+            <p className="text-slate-400 text-sm mt-4 leading-relaxed">
+              DIGITECH SOLUTION hadir untuk membantu UMKM, sekolah, organisasi, dan perusahaan dalam mengadopsi teknologi modern. Kami percaya bahwa website tidak sekadar menjadi pajangan digital, tetapi alat pertumbuhan bisnis yang efisien, tepercaya, dan terjangkau.
+            </p>
+
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+                <h4 className="text-2xl font-bold text-cyan-400">100%</h4>
+                <p className="text-xs text-slate-400 mt-1">Transparansi Biaya & Kode Berstandar Tinggi</p>
+              </div>
+              <div className="p-4 rounded-xl bg-slate-900/50 border border-slate-800">
+                <h4 className="text-2xl font-bold text-fuchsia-400">Fast-Track</h4>
+                <p className="text-xs text-slate-400 mt-1">Pengerjaan Tepat Waktu & Support Berkelanjutan</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Profil Tim */}
+          <div className="p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-slate-800 relative shadow-xl">
+            <div className="absolute -top-3 -right-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg border border-blue-400/30">
+              BEFAN GANTENG GANK
+            </div>
+            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+              <span>Pengelola Utama & Tim Kreatif</span>
+            </h3>
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950 border border-slate-800/80">
+              <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-rose-500 to-cyan-400 flex items-center justify-center font-bold text-white text-xl shrink-0 shadow-md">
+                BF
+              </div>
+              <div>
+                <h4 className="text-white font-bold text-base">BEFAN & TEAM</h4>
+                <p className="text-cyan-400 text-xs font-medium">Lead Full-Stack Developer & UI/UX Designer</p>
+                <p className="text-slate-400 text-[11px] mt-1 leading-relaxed">Fokus pada arsitektur web modern, performa tinggi, dan antarmuka yang ramah pengguna.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. SECTION ALUR PENGERJAAN PROYEK (REVISI BESAR #3) */}
+      <section id="workflow" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
+        <div className="text-center mb-16">
+          <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+            Cara Kerja Kami
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+            7 Tahap Transparan Menuju Website Impian
+          </h2>
+          <p className="text-slate-400 text-sm max-w-xl mx-auto mt-2">
+            Proses terstruktur untuk memastikan setiap detail kebutuhan proyek Anda terpenuhi secara sempurna.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {[
+            { step: "01", title: "Konsultasi Awal", desc: "Diskusi kebutuhan bisnis, target audiens, dan penentuan paket solusi yang paling pas." },
+            { step: "02", title: "Analisis Kebutuhan", desc: "Penyusunan fitur utama, struktur halaman, dan penetapan estimasi tenggat waktu." },
+            { step: "03", title: "Desain UI/UX", desc: "Pembuatan prototipe visual modern dan persetujuan tata letak bersama Anda." },
+            { step: "04", title: "Pengembangan Code", desc: "Proses coding menggunakan Next.js & Tailwind CSS v4 berstandar industri modern." },
+            { step: "05", title: "Pengujian (QA)", desc: "Pengecekan keandalan responsivitas HP/Desktop, optimasi kecepatan, dan uji bebas bug." },
+            { step: "06", title: "Peluncuran Website", desc: "Pemasangan nama domain resmi, konfigurasi server hosting, dan penyetelan SEO." },
+            { step: "07", title: "Dukungan & Garansi", desc: "Sesi panduan kelola mandiri serta garansi pemeliharaan & perbaikan pasca-rilis." },
+          ].map((item, idx) => (
+            <div key={idx} className="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 relative backdrop-blur-sm hover:border-slate-700 transition-colors">
+              <span className="text-3xl font-black text-slate-700/50 absolute top-4 right-4 font-mono">{item.step}</span>
+              <h3 className="text-base font-bold text-white mb-2">{item.title}</h3>
+              <p className="text-slate-400 text-xs leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* COST ESTIMATOR / CALCULATOR SECTION */}
-      <section id="calculator" className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <section id="calculator" className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/40">
         <div className="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-mono mb-3">
@@ -293,14 +462,14 @@ export default function Home() {
                   ].map(feat => (
                     <button
                       key={feat.key}
-                      onClick={() => setCalcFeatures({ ...calcFeatures, [feat.key]: !calcFeatures[feat.key] })}
-                      className={`py-2 px-3 rounded-lg text-xs border flex items-center justify-between transition-all ${calcFeatures[feat.key]
+                      onClick={() => setCalcFeatures({ ...calcFeatures, [feat.key]: !calcFeatures[feat.key as keyof typeof calcFeatures] })}
+                      className={`py-2 px-3 rounded-lg text-xs border flex items-center justify-between transition-all ${calcFeatures[feat.key as keyof typeof calcFeatures]
                         ? 'border-fuchsia-500 bg-fuchsia-500/10 text-fuchsia-300'
                         : 'border-slate-800 bg-slate-950/40 text-slate-500'
                         }`}
                     >
                       <span>{feat.label}</span>
-                      {calcFeatures[feat.key] && <Check className="w-3.5 h-3.5 text-fuchsia-400" />}
+                      {calcFeatures[feat.key as keyof typeof calcFeatures] && <Check className="w-3.5 h-3.5 text-fuchsia-400" />}
                     </button>
                   ))}
                 </div>
@@ -381,6 +550,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4. SECTION FAQ (REVISI BESAR #4) */}
+      <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-slate-800/40">
+        <div className="text-center mb-14">
+          <span className="text-xs font-semibold uppercase tracking-widest text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20 inline-flex items-center gap-1.5">
+            <HelpCircle className="w-3.5 h-3.5" />
+            <span>Pertanyaan Sering Diajukan</span>
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white mt-3">
+            Pertanyaan Umum (FAQ)
+          </h2>
+          <p className="text-slate-400 text-sm mt-2">
+            Segala hal yang perlu Anda ketahui sebelum memulai kerja sama bersama DIGITECH.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {[
+            {
+              q: "Berapa lama estimasi pengerjaan website?",
+              a: "Untuk Landing Page sederhana membutuhkan waktu 3–5 hari kerja. Sementara untuk website katalog produk atau sistem aplikasi kustom membutuhkan waktu 1–3 minggu bergantung pada kompleksitas fitur."
+            },
+            {
+              q: "Apakah domain dan hosting sudah termasuk?",
+              a: "Ya! Seluruh paket yang kami kerjakan sudah mencakup gratis pendaftaran Domain (.com atau .id) selama 1 tahun pertama beserta server cloud hosting berkecepatan tinggi."
+            },
+            {
+              q: "Apakah tersedia revisi desain?",
+              a: "Tentu saja. Kami memberikan kesempatan 2–3 kali revisi besar pada tahap UI/UX sebelum pengerjaan coding dimulai untuk menjamin hasil akhir sesuai ekspektasi Anda."
+            },
+            {
+              q: "Bagaimana sistem pembayaran di DIGITECH?",
+              a: "Pembayaran dibagi 2 tahap: DP (Down Payment) sebesar 50% saat kesepakatan diawali, dan pelunasan 50% setelah website selesai diuji dan siap diluncurkan."
+            },
+            {
+              q: "Apakah ada garansi dan pemeliharaan?",
+              a: "Ya, kami memberikan Garansi Maintenance Gratis selama 1–3 bulan pertama untuk penanganan bug, masalah teknis, atau konsultasi pembaruan konten."
+            },
+            {
+              q: "Apakah klien mendapatkan akses penuh ke website?",
+              a: "Ya, 100%. Setelah proyek lunas, kami menyerahkan seluruh akses kredensial admin dan repositori source code proyek Anda secara penuh."
+            }
+          ].map((faq, i) => (
+            <details key={i} className="group p-5 rounded-2xl bg-slate-900/60 border border-slate-800 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:border-slate-700 transition-colors backdrop-blur-sm">
+              <summary className="flex items-center justify-between font-semibold text-sm text-slate-200 hover:text-cyan-400 transition-colors">
+                <span>{faq.q}</span>
+                <span className="ml-2 text-cyan-400 transition-transform group-open:rotate-180">↓</span>
+              </summary>
+              <p className="mt-3 text-xs text-slate-400 leading-relaxed border-t border-slate-800/80 pt-3">
+                {faq.a}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       {/* TESTIMONIALS */}
       <section id="testimonials" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-slate-800/40 text-center">
         <h2 className="text-3xl font-bold text-white mb-10">Apa Kata Klien Kami?</h2>
@@ -399,7 +623,7 @@ export default function Home() {
           <div>
             <h4 className="font-bold text-white">{testimonialsData[activeTestimonial].author}</h4>
             <p className="text-xs text-cyan-400 mt-0.5">
-              {testimonialsData[activeTestimonial].role} • <span className="text-slate-500">{testimonialsData[activeTestimonial].type}</span>
+              {testimonialsData[activeTestimonial].role} - <span className="text-slate-500">{testimonialsData[activeTestimonial].type}</span>
             </p>
           </div>
 
@@ -447,11 +671,14 @@ export default function Home() {
           </div>
 
           {/* Quick Links Navigasi (HANYA MUNCUL DI HP, SEMBUNYI DI DESKTOP) */}
-          <div className="flex md:hidden items-center gap-6 text-slate-300 font-medium text-xs my-2">
+          <div className="flex md:hidden items-center gap-4 text-slate-300 font-medium text-[11px] my-2 flex-wrap justify-center">
             <a href="#hero" className="hover:text-blue-400 transition-colors">Beranda</a>
             <a href="#services" className="hover:text-blue-400 transition-colors">Layanan</a>
-            <a href="#calculator" className="hover:text-blue-400 transition-colors">Hitung Biaya</a>
-            <a href="#contact" className="hover:text-blue-400 transition-colors">Kontak</a>
+            <a href="#portfolio" className="hover:text-blue-400 transition-colors">Portofolio</a>
+            <a href="#about" className="hover:text-blue-400 transition-colors">Tentang</a>
+            <a href="#workflow" className="hover:text-blue-400 transition-colors">Alur</a>
+            <a href="#calculator" className="hover:text-blue-400 transition-colors">Biaya</a>
+            <a href="#faq" className="hover:text-blue-400 transition-colors">FAQ</a>
           </div>
 
           {/* Copyright */}
