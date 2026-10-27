@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import {
   Code2, Layout, Smartphone, Settings, Sparkles, CheckCircle2,
   ArrowRight, MessageCircle, ChevronRight, Calculator, Check,
-  Star, Award, Laptop, Flame, ShieldCheck, ExternalLink, HelpCircle
+  Star, Award, Laptop, Flame, ShieldCheck, ExternalLink, HelpCircle,
+  Zap, Layers, Shield, CreditCard, Search, Server
 } from 'lucide-react';
 import { servicesData, testimonialsData, targetClientsData } from './data';
 
@@ -12,7 +13,7 @@ export default function Home() {
   const [selectedService, setSelectedService] = useState('all');
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-  // State untuk Calculators / Cost Estimator
+  // State untuk Calculators / Cost Estimator Modern
   const [calcService, setCalcService] = useState('web');
   const [calcPages, setCalcPages] = useState(5);
   const [calcUrgency, setCalcUrgency] = useState('normal');
@@ -233,7 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 1. SECTION TENTANG KAMI */}
+      {/* SECTION TENTANG KAMI */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -281,7 +282,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. SECTION PORTOFOLIO (PINDAH KE SINI) */}
+      {/* SECTION PORTOFOLIO */}
       <section id="portfolio" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
         <div className="text-center mb-16">
           <span className="text-xs font-semibold uppercase tracking-widest text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
@@ -366,7 +367,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. SECTION ALUR PENGERJAAN PROYEK */}
+      {/* SECTION ALUR PENGERJAAN PROYEK */}
       <section id="workflow" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/40">
         <div className="text-center mb-16">
           <span className="text-xs font-semibold uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
@@ -399,134 +400,218 @@ export default function Home() {
         </div>
       </section>
 
-      {/* COST ESTIMATOR / CALCULATOR SECTION */}
-      <section id="calculator" className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-800/40">
-        <div className="bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 text-xs font-mono mb-3">
-              <Calculator className="w-3.5 h-3.5" />
-              <span>Simulasi Instan</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Kalkulator Estimasi Biaya Proyek</h2>
-            <p className="text-slate-400 text-sm mt-1">Dapatkan perkiraan biaya pembuatan proyek digitalmu secara transparan.</p>
+      {/* ========================================================= */}
+      {/* KALKULATOR ESTIMASI BIAYA MODERN & FUTURISTIK (DESAIN BARU) */}
+      {/* ========================================================= */}
+      <section id="calculator" className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-slate-800/40">
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono font-semibold tracking-wider uppercase mb-3 backdrop-blur-md">
+            <Zap className="w-4 h-4 text-cyan-400 animate-pulse" />
+            <span>Smart Project Estimator</span>
           </div>
+          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Kalkulator Estimasi Biaya
+          </h2>
+          <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto mt-3">
+            Rancang paket kebutuhan digitalmu dan dapatkan perkiraan investasi secara transparan & instan.
+          </p>
+        </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            <div className="lg:col-span-7 space-y-6">
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">1. Pilih Jenis Layanan</label>
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    { id: 'web', name: 'Website' },
-                    { id: 'app', name: 'Aplikasi' },
-                    { id: 'uiux', name: 'UI/UX Design' },
-                    { id: 'maintenance', name: 'Maintenance' },
-                  ].map(item => (
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          
+          {/* SISI KIRI: INPUT INTERAKTIF */}
+          <div className="lg:col-span-7 bg-slate-900/60 border border-slate-800/80 rounded-3xl p-6 sm:p-8 backdrop-blur-xl space-y-8 shadow-2xl">
+            
+            {/* 1. KARTU PILIHAN LAYANAN */}
+            <div>
+              <div className="flex items-center gap-2 mb-3 text-slate-300 text-xs font-mono font-bold uppercase tracking-wider">
+                <span className="w-5 h-5 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[11px]">1</span>
+                <span>Pilih Jenis Layanan Utama</span>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { id: 'web', name: 'Website Landing Page', icon: Layout, desc: 'Profil usaha & katalog' },
+                  { id: 'app', name: 'Aplikasi Web / Mobile', icon: Smartphone, desc: 'Sistem kustom & SaaS' },
+                  { id: 'uiux', name: 'Desain UI/UX', icon: Layers, desc: 'Figma prototype modern' },
+                  { id: 'maintenance', name: 'Web Maintenance', icon: Server, desc: 'Perawatan & update' },
+                ].map(item => {
+                  const IconComp = item.icon;
+                  const isSelected = calcService === item.id;
+                  return (
                     <button
                       key={item.id}
                       onClick={() => setCalcService(item.id)}
-                      className={`py-2.5 px-4 rounded-xl text-sm font-medium border text-left transition-all ${calcService === item.id
-                        ? 'border-cyan-500 bg-cyan-500/10 text-cyan-300'
-                        : 'border-slate-800 bg-slate-950/60 text-slate-400 hover:border-slate-700'
-                        }`}
+                      className={`p-4 rounded-2xl border text-left transition-all duration-300 relative overflow-hidden group ${
+                        isSelected
+                          ? 'border-cyan-500 bg-gradient-to-br from-cyan-950/40 to-slate-900 text-white shadow-lg shadow-cyan-950/50'
+                          : 'border-slate-800/80 bg-slate-950/50 text-slate-400 hover:border-slate-700 hover:text-slate-200'
+                      }`}
                     >
-                      {item.name}
+                      {isSelected && (
+                        <div className="absolute top-0 right-0 w-12 h-12 bg-cyan-500/20 rounded-bl-full pointer-events-none flex items-start justify-end p-2">
+                          <Check className="w-3.5 h-3.5 text-cyan-400" />
+                        </div>
+                      )}
+                      <IconComp className={`w-6 h-6 mb-2 transition-colors ${isSelected ? 'text-cyan-400' : 'text-slate-500 group-hover:text-slate-300'}`} />
+                      <div className="font-bold text-xs sm:text-sm text-slate-100">{item.name}</div>
+                      <div className="text-[10px] text-slate-500 mt-0.5">{item.desc}</div>
                     </button>
-                  ))}
-                </div>
+                  );
+                })}
               </div>
+            </div>
 
-              <div>
-                <div className="flex justify-between text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
-                  <span>2. Jumlah Halaman / Tampilan</span>
-                  <span className="text-cyan-400 font-mono text-sm">{calcPages} Halaman</span>
+            {/* 2. SLIDER SLIDER JUMLAH HALAMAN */}
+            <div>
+              <div className="flex justify-between items-center mb-3">
+                <div className="flex items-center gap-2 text-slate-300 text-xs font-mono font-bold uppercase tracking-wider">
+                  <span className="w-5 h-5 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[11px]">2</span>
+                  <span>Jumlah Halaman / Tampilan</span>
                 </div>
+                <span className="text-cyan-400 font-mono text-sm font-bold bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20">
+                  {calcPages} Halaman
+                </span>
+              </div>
+              <div className="relative pt-1">
                 <input
                   type="range"
                   min="1"
                   max="15"
                   value={calcPages}
                   onChange={(e) => setCalcPages(parseInt(e.target.value))}
-                  className="w-full accent-cyan-400 bg-slate-800 h-2 rounded-lg cursor-pointer"
+                  className="w-full h-2.5 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800"
                 />
+                <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-2">
+                  <span>1 Halaman (Landing Page)</span>
+                  <span>8 Halaman</span>
+                  <span>15 Halaman (Multi Page)</span>
+                </div>
               </div>
+            </div>
 
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">3. Fitur Tambahan</label>
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    { key: 'seo', label: 'Optimasi SEO' },
-                    { key: 'cms', label: 'Admin Panel / CMS' },
-                    { key: 'auth', label: 'Sistem Login User' },
-                    { key: 'payment', label: 'Payment Gateway' },
-                  ].map(feat => (
+            {/* 3. CHIPS FITUR TAMBAHAN */}
+            <div>
+              <div className="flex items-center gap-2 mb-3 text-slate-300 text-xs font-mono font-bold uppercase tracking-wider">
+                <span className="w-5 h-5 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[11px]">3</span>
+                <span>Modul & Fitur Tambahan</span>
+              </div>
+              <div className="grid grid-cols-2 gap-2.5">
+                {[
+                  { key: 'seo', label: 'Optimasi SEO & Speed', icon: Search, price: '+Rp 300rb' },
+                  { key: 'cms', label: 'Admin Panel / CMS', icon: Layers, price: '+Rp 500rb' },
+                  { key: 'auth', label: 'Sistem Login User', icon: Shield, price: '+Rp 750rb' },
+                  { key: 'payment', label: 'Payment Gateway', icon: CreditCard, price: '+Rp 1 Jt' },
+                ].map(feat => {
+                  const isChecked = calcFeatures[feat.key as keyof typeof calcFeatures];
+                  const IconComp = feat.icon;
+                  return (
                     <button
                       key={feat.key}
                       onClick={() => setCalcFeatures({ ...calcFeatures, [feat.key]: !calcFeatures[feat.key as keyof typeof calcFeatures] })}
-                      className={`py-2 px-3 rounded-lg text-xs border flex items-center justify-between transition-all ${calcFeatures[feat.key as keyof typeof calcFeatures]
-                        ? 'border-fuchsia-500 bg-fuchsia-500/10 text-fuchsia-300'
-                        : 'border-slate-800 bg-slate-950/40 text-slate-500'
-                        }`}
+                      className={`p-3 rounded-xl border text-xs flex items-center justify-between transition-all ${
+                        isChecked
+                          ? 'border-fuchsia-500/60 bg-fuchsia-500/10 text-fuchsia-200'
+                          : 'border-slate-800 bg-slate-950/40 text-slate-400 hover:border-slate-700'
+                      }`}
                     >
-                      <span>{feat.label}</span>
-                      {calcFeatures[feat.key as keyof typeof calcFeatures] && <Check className="w-3.5 h-3.5 text-fuchsia-400" />}
+                      <div className="flex items-center gap-2">
+                        <IconComp className={`w-4 h-4 ${isChecked ? 'text-fuchsia-400' : 'text-slate-600'}`} />
+                        <span className="font-medium text-[11px] sm:text-xs">{feat.label}</span>
+                      </div>
+                      <span className={`text-[10px] font-mono ${isChecked ? 'text-fuchsia-300 font-bold' : 'text-slate-600'}`}>
+                        {feat.price}
+                      </span>
                     </button>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">4. Prioritas Pengerjaan</label>
-                <div className="grid grid-cols-2 gap-2">
-                  <button
-                    onClick={() => setCalcUrgency('normal')}
-                    className={`py-2 px-4 rounded-xl text-xs font-medium border ${calcUrgency === 'normal' ? 'border-emerald-500 bg-emerald-500/10 text-emerald-300' : 'border-slate-800 bg-slate-950 text-slate-400'
-                      }`}
-                  >
-                    Standar (7-14 Hari)
-                  </button>
-                  <button
-                    onClick={() => setCalcUrgency('fast')}
-                    className={`py-2 px-4 rounded-xl text-xs font-medium border ${calcUrgency === 'fast' ? 'border-amber-500 bg-amber-500/10 text-amber-300' : 'border-slate-800 bg-slate-950 text-slate-400'
-                      }`}
-                  >
-                    Express (3-5 Hari)
-                  </button>
-                </div>
+                  );
+                })}
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-slate-950 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between h-full">
-              <div>
-                <span className="text-xs text-slate-500 uppercase tracking-wider">Perkiraan Biaya Total</span>
-                <div className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-rose-400 my-3 font-mono">
+            {/* 4. PRIORITAS WAKTU */}
+            <div>
+              <div className="flex items-center gap-2 mb-3 text-slate-300 text-xs font-mono font-bold uppercase tracking-wider">
+                <span className="w-5 h-5 rounded-md bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[11px]">4</span>
+                <span>Kecepatan Pengerjaan</span>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <button
+                  onClick={() => setCalcUrgency('normal')}
+                  className={`p-3 rounded-xl border text-xs text-left transition-all ${
+                    calcUrgency === 'normal'
+                      ? 'border-emerald-500/60 bg-emerald-500/10 text-emerald-300 font-bold'
+                      : 'border-slate-800 bg-slate-950/40 text-slate-400'
+                  }`}
+                >
+                  <div className="text-white text-xs">Pengerjaan Standar</div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">7 - 14 Hari Kerja</div>
+                </button>
+                <button
+                  onClick={() => setCalcUrgency('fast')}
+                  className={`p-3 rounded-xl border text-xs text-left transition-all ${
+                    calcUrgency === 'fast'
+                      ? 'border-amber-500/60 bg-amber-500/10 text-amber-300 font-bold'
+                      : 'border-slate-800 bg-slate-950/40 text-slate-400'
+                  }`}
+                >
+                  <div className="text-amber-300 text-xs font-bold flex items-center gap-1">
+                    <Zap className="w-3 h-3 fill-amber-400" />
+                    Express Track (+30%)
+                  </div>
+                  <div className="text-[10px] text-slate-500 mt-0.5">3 - 5 Hari Fast-Delivery</div>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          {/* SISI KANAN: RINGKASAN STICKY CARD & CTA */}
+          <div className="lg:col-span-5 flex flex-col justify-between bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+            {/* Ambient Background Glow */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+            <div>
+              <div className="flex items-center justify-between pb-4 border-b border-slate-800/80 mb-6">
+                <span className="text-xs font-mono text-slate-400 uppercase tracking-widest">Estimasi Ringkasan</span>
+                <span className="text-[10px] bg-slate-800 text-slate-300 px-2 py-1 rounded font-mono">LIVE CALC</span>
+              </div>
+
+              <div className="mb-6">
+                <span className="text-slate-400 text-xs">Total Perkiraan Investasi:</span>
+                <div className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-rose-400 my-2 font-mono tracking-tight">
                   {formatIDR(calculatePrice())}
                 </div>
-                <p className="text-xs text-slate-400 leading-relaxed mb-6">
-                  *Harga di atas merupakan estimasi awal. Harga final dapat disesuaikan dengan kebutuhan spesifik proyek Anda.
+                <p className="text-[11px] text-slate-400 leading-relaxed">
+                  *Harga sudah termasuk instalasi SSL, konfigurasi server, serta garansi perbaikan bug 1–3 bulan.
                 </p>
-
-                <div className="space-y-2 border-t border-slate-900 pt-4 mb-6 text-xs text-slate-400">
-                  <div className="flex justify-between">
-                    <span>Layanan:</span>
-                    <span className="text-slate-200 capitalize font-medium">{calcService}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Estimasi Waktu:</span>
-                    <span className="text-slate-200 font-medium">{calcUrgency === 'fast' ? '3 - 5 Hari' : '7 - 14 Hari'}</span>
-                  </div>
-                </div>
               </div>
 
-              <button
-                onClick={sendToWA}
-                className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-emerald-900/30 transition-all flex items-center justify-center gap-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>Kirim Estimasi ke WhatsApp</span>
-              </button>
+              {/* Detail Rincian Ringkas */}
+              <div className="space-y-3 bg-slate-950/70 p-4 rounded-2xl border border-slate-800/80 text-xs mb-8">
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400">Layanan:</span>
+                  <span className="text-slate-200 font-semibold uppercase">{calcService}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400">Halaman:</span>
+                  <span className="text-slate-200 font-semibold">{calcPages} Halaman</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-slate-400">Estimasi Rilis:</span>
+                  <span className="text-cyan-400 font-semibold">{calcUrgency === 'fast' ? '3–5 Hari (Express)' : '7–14 Hari (Normal)'}</span>
+                </div>
+              </div>
             </div>
+
+            {/* Tombol Kirim WhatsApp */}
+            <button
+              onClick={sendToWA}
+              className="w-full bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-white font-bold py-4 rounded-2xl shadow-xl shadow-teal-950/50 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 text-sm"
+            >
+              <MessageCircle className="w-5 h-5 fill-white text-teal-600" />
+              <span>Kirim Hasil Estimasi ke WhatsApp</span>
+            </button>
           </div>
+
         </div>
       </section>
 
@@ -550,7 +635,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. SECTION FAQ */}
+      {/* SECTION FAQ */}
       <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto border-t border-slate-800/40">
         <div className="text-center mb-14">
           <span className="text-xs font-semibold uppercase tracking-widest text-rose-400 bg-rose-500/10 px-3 py-1 rounded-full border border-rose-500/20 inline-flex items-center gap-1.5">
@@ -670,7 +755,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Quick Links Navigasi (HANYA MUNCUL DI HP, SEMBUNYI DI DESKTOP) */}
+          {/* Quick Links Navigasi */}
           <div className="flex md:hidden items-center gap-4 text-slate-300 font-medium text-[11px] my-2 flex-wrap justify-center">
             <a href="#hero" className="hover:text-blue-400 transition-colors">Beranda</a>
             <a href="#services" className="hover:text-blue-400 transition-colors">Layanan</a>
